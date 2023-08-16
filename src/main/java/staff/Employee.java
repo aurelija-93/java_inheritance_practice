@@ -15,6 +15,13 @@ public class Employee {
         return name;
     }
 
+    public void setName(String name) {
+        if (name == null) {
+            return;
+        }
+        this.name = name;
+    }
+
     public String getNiNumber() {
         return niNumber;
     }
@@ -24,7 +31,9 @@ public class Employee {
     }
 
     public void raiseSalary(double amount) {
-        salary += amount;
+        if (amount >= 0) {
+            salary += amount;
+        }
     }
 
     public double payBonus() {
