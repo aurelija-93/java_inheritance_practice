@@ -28,6 +28,8 @@ public class Employee {
     }
 
     public double payBonus() {
-        return salary / 100;
+        double bonus = salary / 100;
+        double roundedBonus = Math.round(bonus*100.0)/100.0;
+        return roundedBonus;
     }
 }
